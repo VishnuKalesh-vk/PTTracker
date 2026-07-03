@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PTTracker.Api/PTTracker.Api.csproj" />
+    <Project Path="src/PTTracker.Application/PTTracker.Application.csproj" />
+    <Project Path="src/PTTracker.Contracts/PTTracker.Contracts.csproj" />
+    <Project Path="src/PTTracker.Domain/PTTracker.Domain.csproj" />
+    <Project Path="src/PTTracker.Infrastructure/PTTracker.Infrastructure.csproj" />
+    <Project Path="src/PTTracker.Worker/PTTracker.Worker.csproj" />
+  </Folder>
+</Solution>
