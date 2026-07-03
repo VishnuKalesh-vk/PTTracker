@@ -1,0 +1,22 @@
+namespace PTTracker.Application.Common.Models;
+
+/// <summary>Materialized page of results plus the total row count, used by repositories.</summary>
+public class PagedList<T>
+{
+    public IReadOnlyList<T> Items { get; }
+    public int Page { get; }
+    public int PageSize { get; }
+    public int TotalCount { get; }
+    public int TotalPages { get; }
+    public bool HasPrevious => Page > 1;
+    public bool HasNext => Page < TotalPages;
+
+    public PagedList(IReadOnlyList<T> items, int totalCount, int page, int pageSize)
+    {
+        Items = items;
+        TotalCount = totalCount;
+        Page = page;
+        PageSize = pageSize;
+        TotalPages = pageSize <= 0 ? 0 : (int)Math.Ceiling(totalCount / (double)pageSize);
+    }
+}
